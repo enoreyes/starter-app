@@ -25,7 +25,7 @@ Tauri is a framework for building tiny, fast, and secure desktop applications us
 Clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/factoryai/starter-app
+git clone https://github.com/enoreyes/starter-app
 cd starter-app
 ```
 
@@ -35,18 +35,18 @@ Install dependencies:
 npm install
 ```
 
-Run the development server:
+Run the desktop application:
 
 ```bash
-npm run dev
+npm run tauri:dev
 ```
 
-This will launch the app in development mode with hot reloading.
+This will launch a native desktop window application, not just a browser tab. The first build may take a few minutes as Rust dependencies are compiled.
 
 ## Available Commands
 
-- `npm run dev` - Start the development server
-- `npm run build` - Build the app for production
+- `npm run tauri:dev` - Start the desktop application in development mode
+- `npm run tauri:build` - Build the desktop application for production
 - `npm test` - Run tests
 - `npm run lint` - Run linting
 
@@ -54,10 +54,12 @@ This will launch the app in development mode with hot reloading.
 
 ```
 starter-app/
-├── src/               # Frontend source code
+├── src/               # Frontend source code (React)
 │   ├── App.tsx        # Main application component
 │   └── backend.ts     # Interface to Rust backend
-├── package.json       # Dependencies and scripts
+├── src-tauri/         # Rust backend code
+│   ├── src/main.rs    # Main Rust entry point
+│   └── tauri.conf.json # Tauri configuration
 └── README.md          # This file
 ```
 

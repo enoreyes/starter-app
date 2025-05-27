@@ -1,0 +1,61 @@
+# Node dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+pnpm-debug.log
+.pnpm-store/
+
+# Tauri build artifacts
+src-tauri/target/
+src-tauri/WixTools/
+src-tauri/gen/
+
+# Build directories
+dist/
+dist-electron/
+build/
+out/
+.next/
+.nuxt/
+.output/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+
+# IDE files
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.vs/
+*.sublime-*
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+logs
+*.log
+
+# Temporary files
+.cache/
+.temp/
+.tmp/
+
+# Coverage directory
+coverage/
+
+# Vitest
+vitest.config.ts.timestamp-*
