@@ -1,8 +1,8 @@
 /**
  * backend.ts
  * 
- * This file demonstrates how to interact with the Tauri/Rust backend.
- * It provides a simple API for the frontend to communicate with native functionality.
+ * This file handles communication with the Tauri/Rust backend.
+ * It provides a simple API for the frontend to send and receive data.
  */
 
 // Import the invoke function from Tauri API
@@ -25,20 +25,4 @@ export async function sendGreeting(name: string): Promise<string> {
     console.error('Error calling Rust backend:', error);
     return `Error: Failed to send greeting to backend`;
   }
-}
-
-/**
- * A placeholder function for future Rust backend integration.
- * 
- * In a real application, you would implement more commands in your
- * Rust backend (main.rs) and call them using the invoke function.
- * 
- * @param data - The data to process
- * @returns A promise that resolves when processing is complete
- */
-export async function processDataInRust(data: unknown): Promise<void> {
-  console.log('Would process in Rust backend:', data);
-  
-  // Example of how you would call a real Rust command:
-  // await invoke('process_data', { data });
 }

@@ -1,74 +1,44 @@
-/* CSS Reset and Normalize */
-*, *::before, *::after {
-  box-sizing: border-box;
+/* 
+  Basic CSS Reset and Global Styles
+  This file provides fundamental styling for the entire application
+*/
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* Document setup */
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-}
-
-/* Base body styles */
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  color: #333;
-  background-color: #f8f9fa;
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
 }
 
-/* Remove list styles */
-ul, ol {
-  list-style: none;
-}
-
-/* Make images responsive */
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-/* Inherit fonts for inputs and buttons */
-input, button, textarea, select {
-  font: inherit;
-}
-
-/* Remove default styles from links */
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Global utility classes */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.container {
+html, body {
+  height: 100%;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
 
-/* Responsive text */
-@media (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  color: #213547;
+}
+
+#root {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #646cff;
+}
+
+a:hover {
+  color: #535bf2;
 }
