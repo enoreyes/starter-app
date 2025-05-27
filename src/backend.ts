@@ -11,16 +11,14 @@ import { invoke } from '@tauri-apps/api/tauri';
 /**
  * Sends a greeting to the Rust backend and returns the response.
  * 
- * This is a simple example of how to call Rust commands from TypeScript.
- * In a real application, you would define more complex interactions.
+ * This calls the 'greet' command defined in our Rust backend (main.rs).
  * 
  * @param name - The name to greet
  * @returns A promise that resolves to the greeting message from the backend
  */
 export async function sendGreeting(name: string): Promise<string> {
   try {
-    // Invoke the 'greet' command defined in Rust
-    // This would correspond to a #[tauri::command] function in your Rust code
+    // Invoke the 'greet' command defined in Rust (main.rs)
     const response = await invoke<string>('greet', { name });
     return response;
   } catch (error) {
@@ -30,18 +28,17 @@ export async function sendGreeting(name: string): Promise<string> {
 }
 
 /**
- * A dummy function that simulates processing data through the Rust backend.
+ * A placeholder function for future Rust backend integration.
  * 
- * In a real application, you might use Rust for performance-critical operations
- * like data processing, file system operations, or system integrations.
+ * In a real application, you would implement more commands in your
+ * Rust backend (main.rs) and call them using the invoke function.
  * 
  * @param data - The data to process
  * @returns A promise that resolves when processing is complete
  */
 export async function processDataInRust(data: unknown): Promise<void> {
-  // This is just a placeholder to demonstrate the pattern
   console.log('Would process in Rust backend:', data);
   
-  // In a real implementation, you would invoke a Rust command:
+  // Example of how you would call a real Rust command:
   // await invoke('process_data', { data });
 }
